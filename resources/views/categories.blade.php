@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 pt-5">
                 <h4>Categories</h4>
-                <table id="category-table">
+                <table id="categories-table">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -31,7 +31,7 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            $('#category-table').DataTable();
+            $('#categories-table').DataTable();
         });
     </script>
 @endpush

@@ -17,6 +17,7 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', [ProductController::class, 'index'])->name('products.index');
+Route::get('/list', [ProductController::class, 'list'])->name('products.list');
 Route::post('/', [ProductController::class, 'store'])->name('products.store');
 
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');

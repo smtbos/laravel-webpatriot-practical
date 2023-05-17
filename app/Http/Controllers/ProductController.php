@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
+use Yajra\DataTables\DataTables;
+
 use App\Http\Requests\StoreProductRequest;
+
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -19,6 +23,19 @@ class ProductController extends Controller
         $products = Product::with('category')->get();
 
         return view('products', compact('categories', 'products'));
+    }
+
+    /**
+     * Return a listing of the resource.
+     */
+    public function list(Request $request)
+    {
+        $products = Product::with('category');
+
+        $datatable =  DataTables::of($products)
+            ->make(true);
+
+        return $datatable;
     }
 
     /**

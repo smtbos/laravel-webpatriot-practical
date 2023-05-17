@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-12 pt-5">
                 <h4>Products</h4>
-                <table id="product-table">
+                <table id="products-table">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -54,7 +54,27 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            $('#product-table').DataTable();
+            /**
+             * Initialize DataTables
+             */
+            table = $('#products-table').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('products.list') }}",
+                columns: [{
+                        title: 'ID',
+                        data: 'id'
+                    },
+                    {
+                        title: 'Category',
+                        data: 'name'
+                    },
+                    {
+                        title: 'Name',
+                        data: 'name'
+                    },
+                ]
+            });
         });
     </script>
 @endpush
