@@ -20,9 +20,7 @@ class ProductController extends Controller
     {
         $categories = Category::all();
 
-        $products = Product::with('category')->get();
-
-        return view('products', compact('categories', 'products'));
+        return view('products', compact('categories'));
     }
 
     /**

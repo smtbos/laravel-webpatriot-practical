@@ -36,15 +36,6 @@
                             <th>Name</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        @foreach ($products as $product)
-                            <tr>
-                                <td>{{ $product->id }}</td>
-                                <td>{{ $product->category->name }}</td>
-                                <td>{{ $product->name }}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
                 </table>
             </div>
         </div>
@@ -57,7 +48,7 @@
             /**
              * Initialize DataTables
              */
-            table = $('#products-table').DataTable({
+            $('#products-table').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('products.list') }}",
