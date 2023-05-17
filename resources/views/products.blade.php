@@ -67,7 +67,7 @@
                     },
                     {
                         title: 'Category',
-                        data: 'name'
+                        data: 'category.name'
                     },
                     {
                         title: 'Name',
