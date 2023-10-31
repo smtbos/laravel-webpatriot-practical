@@ -13,13 +13,14 @@
     - ID(Auto Generated)
     - caegory_id
     - name
+## Explanation [Video](https://drive.google.com/file/d/1MRZTottnNyl36aWKednZroHUKSK4jpuM/view?usp=sharing)
 
 ## Setup
 
 
 #### Clone repository
 ```bash
-git clone https://github.com/smtbos/laravel-category-and-products.git
+git clone https://github.com/smtbos/practical-webpatriot.git
 ```
 
 #### Change directory
